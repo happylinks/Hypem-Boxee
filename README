@@ -1,0 +1,24 @@
+The past few days I have been trying to get hypem to work with boxee.
+I had to get the direct mp3-files from hypem for this to work.
+I have made 3 rss feeds; popular, latest and person.
+
+I will give you a couple of steps to guide you trough the process:
+
+--Get your hypem key
+Step 1: go to hypem.com in a browser from which you can view the cookies. (I would suggest firefox with the firebug addons).
+Step 2: look for a cookie named AUTH, you will see that this cookie contains a long code. This code will look something like this: 03%3A5aa5f46f7b00d9b559b10d6ed55739f8%3A1295786834%3A1591091732%3A05-NL
+If the code looks like this: 03:5aa5f46f7b00d9b559b10d6ed55739f8:1295786834:1591091732:05-NL you will have to urlencode it first. You can do this at http://meyerweb.com/eric/tools/dencoder/ Paste the url here and click encode.
+Step 3: Save this code somewhere, notepad or something.
+--Add the key to boxee
+Step 4: We are going to add a cookie to boxee. I will show you how this is done on windows, other os'es
+Open the folder: C:\Users\[username]\AppData\Roaming\BOXEE\userdata\temp 
+Open the file [username]-boxee-cookies.dat in notepad and add the line: 
+.hypem.com	TRUE	/	FALSE	1800307177	AUTH	[THE KEY YOU SAVED]
+Save the file.
+--Add the feeds to boxee
+Step 5: open boxee, open Apps, open the RSS Feeds-app. I have 3 feeds you can use:
+Person: http://happylinks.nl/hypem/person.php?hash=[THE KEY YOU SAVED]&user=[USERNAME]
+Popular: http://happylinks.nl/hypem/popular.php?hash=[THE KEY YOU SAVED]
+Latest: http://happylinks.nl/hypem/latest.php?hash=[THE KEY YOU SAVED]
+Step 6: You're good to go! Please let me know what you think!
+My mail is: happylinks @ gmail.com
